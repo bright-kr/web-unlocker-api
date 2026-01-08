@@ -1,6 +1,6 @@
 # Web Unlocker API
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/) 
+[![Promo](https://github.com/bright-kr/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/) 
 
 [Web Unlocker](https://brightdata.co.kr/products/web-unlocker)는 고도화된 봇 보호를 우회하면서 어떤 웹사이트에도 접근할 수 있도록 해주는 강력한 스크レイピング API입니다. 복잡한 アンチボット 인프라를 관리하지 않고도 단일 API 호출로 깔끔한 HTML/JSON レスポンス를 가져올 수 있습니다.
 
@@ -215,14 +215,14 @@ headers["x-unblock-expect"] = '{"element": ".star-wrapper__desc"}'
 headers["x-unblock-expect"] = '{"text": "reviews"}'
 ```
 
-👉 전체 코드는 [g2_wait.py](https://github.com/luminati-io/web-unlocker/blob/main/src/g2_wait.py)에서 확인할 수 있습니다.
+👉 전체 코드는 [g2_wait.py](https://github.com/bright-kr/web-unlocker/blob/main/src/g2_wait.py)에서 확인할 수 있습니다.
 
 #### Mobile User-Agent Targeting
 데스크톱 user agent 대신 모바일 user agent를 사용하려면 username에 `-ua-mobile`을 추가하십시오:
 ```python
 username = f"brd-customer-{customer_id}-zone-{zone_name}-ua-mobile"
 ```
-👉 전체 코드는 [g2_mobile.py](https://github.com/luminati-io/web-unlocker/blob/main/src/g2_mobile.py)에서 확인할 수 있습니다.
+👉 전체 코드는 [g2_mobile.py](https://github.com/bright-kr/web-unlocker/blob/main/src/g2_mobile.py)에서 확인할 수 있습니다.
 
 #### Geolocation Targeting
 Web Unlocker는 자동으로 최적의 IP 위치를 선택하지만, 대상 위치를 지정할 수도 있습니다:
@@ -238,7 +238,7 @@ username = f"brd-customer-{customer_id}-zone-{zone_name}-country-us-city-sanfran
 ```python
 username = f"brd-customer-{customer_id}-zone-{zone_name}-debug-full"
 ```
-👉 전체 코드는 [g2_debug.py](https://github.com/luminati-io/web-unlocker/blob/main/src/g2_debug.py)에서 확인할 수 있습니다.
+👉 전체 코드는 [g2_debug.py](https://github.com/bright-kr/web-unlocker/blob/main/src/g2_debug.py)에서 확인할 수 있습니다.
 
 #### Success Rate Statistics
 특정 도메인에 대한 API 성공률을 모니터링합니다:
