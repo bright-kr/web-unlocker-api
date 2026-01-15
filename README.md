@@ -2,7 +2,7 @@
 
 [![Promo](https://github.com/bright-kr/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/) 
 
-[Web Unlocker](https://brightdata.co.kr/products/web-unlocker)는 고도화된 봇 보호를 우회하면서 어떤 웹사이트에도 접근할 수 있도록 해주는 강력한 스크レイピング API입니다. 복잡한 アンチボット 인프라를 관리하지 않고도 단일 API 호출로 깔끔한 HTML/JSON レスポンス를 가져올 수 있습니다.
+[Web Unlocker](https://brightdata.co.kr/products/web-unlocker)는 고도화된 봇 보호를 우회하면서 어떤 웹사이트에도 접근할 수 있도록 해주는 강력한 스크レイピング API입니다. 복잡한 안티봇 인프라를 관리하지 않고도 단일 API 호출로 깔끔한 HTML/JSON 응답를 가져올 수 있습니다.
 
 # Table of Contents
 - [Features](#features)
@@ -22,12 +22,12 @@
 - [Final Notes](#final-notes)
 
 ## Features
-Web Unlocker는 포괄적인 Webスクレイピング 기능을 제공합니다:
-- 자동 プロキシ 관리 및 CAPTCHA 해결
+Web Unlocker는 포괄적인 Web스크레이핑 기능을 제공합니다:
+- 자동 프록시 관리 및 CAPTCHA 해결
 - 실제 사용자 행동 시뮬레이션
 - 내장 JavaScript 렌더링
-- 글로벌 ジオロケーション 타기팅
-- 자동 リトライ 메커니즘
+- 글로벌 지오로케이션 타기팅
+- 자동 재시도 메커니즘
 - 성공당 과금(Pay-per-success) 요금 모델
 
 ## Getting Started
@@ -54,7 +54,7 @@ curl -X POST "https://api.brightdata.com/request" \
 3. Payload:
    - `zone`: 사용 중인 Web Unlocker API zone 이름
    - `url`: 접근할 대상 URL
-   - `format`: レスポンス 형식(사이트의 직접 レスポンス를 받으려면 `raw` 사용)
+   - `format`: 응답 형식(사이트의 직접 응답를 받으려면 `raw` 사용)
 
 **Example: Python Script**
 ```python
@@ -86,7 +86,7 @@ else:
 
 ### Native Proxy-based Access
 
-プロキシ 기반 라우팅을 사용하는 대체 방법입니다.
+프록시 기반 라우팅을 사용하는 대체 방법입니다.
 
 **Example: cURL Command**
 ```bash
@@ -148,7 +148,7 @@ else:
     print("Request blocked")
 ```
 
-**Result:** Cloudflare의 アンチボット 조치로 인해 스크립트가 실패합니다(`403` 오류).
+**Result:** Cloudflare의 안티봇 조치로 인해 스크립트가 실패합니다(`403` 오류).
 
 
 ### Enhanced Request (With Web Unlocker)
@@ -182,7 +182,7 @@ else:
 **Result:** 보호를 성공적으로 우회하고 상태 `200`으로 콘텐츠를 가져옵니다.
 
 #### Proxy-Based Access
-대안으로 プロキシ 기반 방법을 사용할 수 있습니다:
+대안으로 프록시 기반 방법을 사용할 수 있습니다:
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -208,7 +208,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 ```
 
 #### Waiting for Specific Elements
-`x-unblock-expect` ヘッダー를 사용하여 특정 요소 또는 텍스트를 기다릴 수 있습니다:
+`x-unblock-expect` 헤더를 사용하여 특정 요소 또는 텍스트를 기다릴 수 있습니다:
 ```python
 headers["x-unblock-expect"] = '{"element": ".star-wrapper__desc"}'
 # or
@@ -278,6 +278,6 @@ Web Unlocker를 사용하면 가장 강력하게 보호되는 웹사이트도 �
    자동으로 해결되지만 [disabled](https://docs.brightdata.com/scraping-automation/web-unlocker/features#disable-captcha-solving)할 수 있습니다. Bright Data의 [CAPTCHA Solver](https://brightdata.co.kr/products/web-unlocker/captcha-solver)에 대해 더 알아보십시오.
    
 5. **Custom Headers & Cookies**:  
-   특정 사이트 버전을 타기팅하기 위해 사용자 지정 ヘッダー 및 Cookie를 전송할 수 있습니다. [Learn more](https://docs.brightdata.com/scraping-automation/web-unlocker/features#manual-headers-and-cookies).
+   특정 사이트 버전을 타기팅하기 위해 사용자 지정 헤더 및 Cookie를 전송할 수 있습니다. [Learn more](https://docs.brightdata.com/scraping-automation/web-unlocker/features#manual-headers-and-cookies).
 
 자세한 내용은 [official documentation](https://docs.brightdata.com/scraping-automation/web-unlocker/introduction)을 방문하여 확인하십시오.
